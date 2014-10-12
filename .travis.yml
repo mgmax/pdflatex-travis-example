@@ -7,6 +7,7 @@ before_install:
   texlive-latex-extra
 - echo "$myvar"
 script: make
+before_deploy: git fetch --tags
 deploy:
   provider: releases
   api_key:
@@ -16,4 +17,3 @@ deploy:
     repo: mgmax/pdflatex-travis-example
   # necessary so that the output is not deleted:
   skip_cleanup: true
-  before_deploy: git fetch --tags
