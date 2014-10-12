@@ -1,0 +1,5 @@
+language: c
+compiler:
+  - gcc
+# eigentlich brauchen wir kein C... aber geht nicht anders
+script: make
