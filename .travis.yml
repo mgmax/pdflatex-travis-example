@@ -1,5 +1,10 @@
+
+# this is fake, but texlive or "shell only" is not officially supported
 language: c
+
 compiler:
   - gcc
-# eigentlich brauchen wir kein C... aber geht nicht anders
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y texlive texlive-lang-german texlive-most 
 script: make
