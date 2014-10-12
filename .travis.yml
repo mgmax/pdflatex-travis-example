@@ -1,11 +1,16 @@
-
-# this is fake, but texlive or "shell only" is not officially supported
 language: c
-
 compiler:
-  - gcc
+- gcc
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y texlive texlive-lang-german  texlive-latex-recommended texlive-latex-extra
-  - echo "$myvar"
+- sudo apt-get update -qq
+- sudo apt-get install -qq -y texlive texlive-lang-german  texlive-latex-recommended
+  texlive-latex-extra
+- echo "$myvar"
 script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: eZP0aPpZ/ETgFleBonOR+DhRXS6svmxF1sRViuzZW4Ef/cFj1w2ZH9fWpO82uJawp9ujNovFNZ+1HolRSN8MifR85bZONOycbNm63gOTIJC9gHlpaWHgIt3/aSPux3CD/OjPL3P7oAtKN77tSmL3ZbyYFV88E4T3HGbb0hyN8MM=
+  file: demo.pdf
+  on:
+    repo: mgmax/pdflatex-travis-example
