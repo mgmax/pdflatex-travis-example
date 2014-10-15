@@ -7,7 +7,4 @@ before_install:
 script: make
 # deployment:
 after_success:
-- openssl aes-256-cbc -K $encrypted_46f1a2582584_key -iv $encrypted_46f1a2582584_iv
-  -in deployment/deployment_private_key.id_rsa.enc -out deployment/deployment_private_key.id_rsa -d
-- chmod 600 deployment/deployment_private_key.id_rsa
 - ./deployment/deploy.sh
