@@ -1,1 +1,2 @@
-put "demo.pdf" "upload/demo.pdf"
+cd upload
+put output/*

@@ -12,7 +12,7 @@
 ###   % cat Makefile
 ###   TARGET=mypaper
 ###   PDFVIEWER=open -a 'Adobe Acrobat Professional'
-###   AFTERALL=mypostprocessingstep
+AFTERALL=cp $TARGET.pdf output/
 ###   include Makefile.include
 ###
 ###   mypostprocessingstep:
